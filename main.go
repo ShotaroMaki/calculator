@@ -72,7 +72,7 @@ func main() {
 		flg:false,
 	}
 
-	//calc is calculate
+	//計算処理
 	calc := func(n int) {
 		switch data.cal {
 		case "":
@@ -91,7 +91,7 @@ func main() {
 		data.flg = true
 	}
 
-	//pushNum is Number button action
+	//数字ボタン押下時アクション
 	pushNum := func (v int) {
 		s := l.Text
 		if data.flg {
@@ -105,7 +105,7 @@ func main() {
 		}
 	}
 
-	//pushCalc is operation symbol button action.
+	//CLボタン押下時アクション
 	pushCalc := func(c string){
 		if c == "CL" {
 			l.SetText("0")
@@ -122,7 +122,7 @@ func main() {
 		data.cal = c
 	}
 
-	//pushEnter is enter button action
+	//Enterボタン押下時アクション
 	pushEnter := func() {
 		n, er := strconv.Atoi(l.Text)
 		if er != nil {
